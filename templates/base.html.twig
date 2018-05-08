@@ -3,10 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title 'Cart lite' %}</title>
-        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
     </head>
     <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="{{ path('home') }}">Cart lite</a>
+    </nav>
+    <main role="main">
         {% block body %}{% endblock %}
-        <script src="{{ asset('build/app.js') }}"></script>
+    </main>
+    <script src="{{ asset('build/js/app.js') }}"></script>
     </body>
 </html>
