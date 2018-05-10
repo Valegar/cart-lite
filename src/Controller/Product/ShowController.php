@@ -4,9 +4,9 @@ namespace App\Controller\Product;
 
 use App\Entity\Product;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class ShowController extends Controller
+class ShowController extends AbstractController
 {
     /**
      * @Route("/{id}/show", name="product_show")

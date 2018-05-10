@@ -11,8 +11,13 @@
             <a href="{{ path('home') }}" class="navbar-brand d-flex align-items-center">
                 <strong>Cart lite</strong>
             </a>
-            <a href="#" class="btn btn-outline-light" title="{{ 'cart'|trans }}">
-                <i class="icon-basket icons"></i><span class="sr-only">{{ 'cart'|trans }}</span></a>
+            <a href="{{ path('cart_show') }}" class="btn btn-outline-light" title="{{ 'cart'|trans }}">
+                <i class="icon-basket icons"></i>
+                <span class="sr-only">{{ 'cart'|trans }}</span>
+                {% if app.session.has('cart') and app.session.get('cart')|length %}
+                <span class="badge badge-light">{{ app.session.get('cart')|length }}</span>
+                {% endif %}
+            </a>
         </div>
     </div>
     <main role="main">

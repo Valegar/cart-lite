@@ -21,9 +21,9 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a href="{{ path('product_show', {'id': product.id}) }}" class="btn btn-sm btn-outline-secondary">{{ 'show'|trans }}</a>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">{{ 'add.to.cart'|trans }}</button>
+                                <a href="{{ path('cart_edit', {'id': product.id, 'quantity': 1}) }}" class="btn btn-sm btn-outline-secondary">{{ 'add.to.cart'|trans }}</a>
                             </div>
-                            <small class="text-muted"></small>
+                            <small class="text-muted">{{ product.price / 100 }} €</small>
                         </div>
                     </div>
                 </div>
