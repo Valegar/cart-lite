@@ -18,7 +18,13 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p class="card-text">{{ product.description }}</p>
-                        <a href="#" class="btn btn-primary">{{ 'add.to.cart'|trans }}</a>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="{{ path('product_show', {'id': product.id}) }}" class="btn btn-sm btn-outline-secondary">{{ 'show'|trans }}</a>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">{{ 'add.to.cart'|trans }}</button>
+                            </div>
+                            <small class="text-muted"></small>
+                        </div>
                     </div>
                 </div>
             </div>

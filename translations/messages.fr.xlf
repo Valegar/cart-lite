@@ -13,5 +13,23 @@
         <target>Ajouter au panier</target>
       </segment>
     </unit>
+    <unit id="HGMzUJ3" name="show">
+      <segment>
+        <source>show</source>
+        <target>Afficher</target>
+      </segment>
+    </unit>
+    <unit id="HELdwCh" name="cart">
+      <segment>
+        <source>cart</source>
+        <target>Panier</target>
+      </segment>
+    </unit>
+    <unit id="GnswjY3" name="quantity">
+      <segment>
+        <source>quantity</source>
+        <target>Quantité</target>
+      </segment>
+    </unit>
   </file>
 </xliff>

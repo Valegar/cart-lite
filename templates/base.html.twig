@@ -6,9 +6,15 @@
         <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
     </head>
     <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand" href="{{ path('home') }}">Cart lite</a>
-    </nav>
+    <div class="navbar navbar-dark bg-dark box-shadow sticky-top">
+        <div class="container d-flex justify-content-between">
+            <a href="{{ path('home') }}" class="navbar-brand d-flex align-items-center">
+                <strong>Cart lite</strong>
+            </a>
+            <a href="#" class="btn btn-outline-light" title="{{ 'cart'|trans }}">
+                <i class="icon-basket icons"></i><span class="sr-only">{{ 'cart'|trans }}</span></a>
+        </div>
+    </div>
     <main role="main">
         {% block body %}{% endblock %}
     </main>
