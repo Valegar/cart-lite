@@ -29,6 +29,14 @@ class ProductRepository extends ServiceEntityRepository
         return $qb->getQuery()->getResult();
     }
 
+    public function findAllForExport(): array
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->orderBy('p.name');
+
+        return $qb->getQuery()->getArrayResult();
+    }
+
     /**
      * @return Product[]
      */
