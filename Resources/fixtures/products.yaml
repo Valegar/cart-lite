@@ -3,3 +3,4 @@ App\Entity\Product:
         name: '<word()>'
         description: '<paragraph()>'
         price: '<numberBetween(1000, 50000)>'
+        picture: 'http://via.placeholder.com/286x180'

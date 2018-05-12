@@ -16,7 +16,7 @@
     <unit id="HGMzUJ3" name="show">
       <segment>
         <source>show</source>
-        <target>Afficher</target>
+        <target>Voir la fiche</target>
       </segment>
     </unit>
     <unit id="HELdwCh" name="cart">

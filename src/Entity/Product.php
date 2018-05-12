@@ -36,6 +36,12 @@ class Product
      */
     private $price;
 
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     * @Groups({"list_products"})
+     */
+    private $picture;
+
     public function getId()
     {
         return $this->id;
@@ -73,6 +79,18 @@ class Product
     public function setPrice(int $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): self
+    {
+        $this->picture = $picture;
 
         return $this;
     }
