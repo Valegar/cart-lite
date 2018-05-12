@@ -6,6 +6,7 @@ use App\Cart\CartManager;
 use App\Entity\Product;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Translation\TranslatorInterface;
 
 class CartController extends AbstractController
 {
@@ -44,5 +45,16 @@ class CartController extends AbstractController
         $this->cartManager->editCart($product, $quantity);
 
         return $this->redirectToRoute('cart_show');
+    }
+
+    /**
+     * @Route("/cart/reset", name="cart_reset")
+     */
+    public function reset(TranslatorInterface $translator)
+    {
+        $this->cartManager->resetCart();
+        $this->addFlash('success', $translator->trans('flash.your_cart_is_empty'));
+
+        return $this->redirectToRoute('home');
     }
 }

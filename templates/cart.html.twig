@@ -25,6 +25,10 @@
                         <strong>{{ cart.totalAmount / 100 }} €</strong>
                     </li>
                 </ul>
+                <div class="card p-2">
+                    <button type="button" class="btn btn-primary btn-lg">{{ 'checkout'|trans }}</button>
+                    <a href="{{ path('cart_reset') }}" class="btn btn-outline-dark btn-sm mt-3">{{ 'empty.cart'|trans }}</a>
+                </div>
             </div>
             <div class="col-md-8">
             </div>

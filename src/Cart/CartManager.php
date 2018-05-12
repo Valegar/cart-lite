@@ -58,6 +58,11 @@ class CartManager
         $this->session->set('cart', $cartData);
     }
 
+    public function resetCart()
+    {
+        $this->session->set('cart', []);
+    }
+
     /**
      * @return Product[]
      */

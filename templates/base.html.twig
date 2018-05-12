@@ -5,7 +5,7 @@
         <title>{% block title 'Cart lite' %}</title>
         <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
     </head>
-    <body>
+    <body class="bg-light">
     <div class="navbar navbar-dark bg-dark box-shadow sticky-top">
         <div class="container d-flex justify-content-between">
             <a href="{{ path('home') }}" class="navbar-brand d-flex align-items-center">
@@ -21,6 +21,11 @@
         </div>
     </div>
     <main role="main">
+        {% for type, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ type }}" role="alert">{{ message }}</div>
+            {% endfor %}
+        {% endfor %}
         {% block body %}{% endblock %}
     </main>
     <script src="{{ asset('build/js/app.js') }}"></script>

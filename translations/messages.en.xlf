@@ -31,5 +31,23 @@
         <target>Quantity</target>
       </segment>
     </unit>
+    <unit id="x3YeWJa" name="checkout">
+      <segment>
+        <source>checkout</source>
+        <target>Checkout</target>
+      </segment>
+    </unit>
+    <unit id="bIHyqEc" name="empty.cart">
+      <segment>
+        <source>empty.cart</source>
+        <target>Empty cart</target>
+      </segment>
+    </unit>
+    <unit id="ZqPA7aR" name="flash.your_cart_is_empty">
+      <segment>
+        <source>flash.your_cart_is_empty</source>
+        <target>Your cart is empty</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
