@@ -36,7 +36,7 @@ class CartController extends AbstractController
 
     /**
      * @Route("/cart/{id}/{quantity}/edit",
-     *     requirements={"id"="\d+", "quantity"="\d+"},
+     *     requirements={"id"="\d+", "quantity"="-?\d+"},
      *     name="cart_edit"
      * )
      */
