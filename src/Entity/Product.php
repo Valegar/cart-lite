@@ -42,9 +42,16 @@ class Product
      */
     private $picture;
 
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setId(int $id): Product
+    {
+        $this->id = $id;
+
+        return $this;
     }
 
     public function getName(): ?string
