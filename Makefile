@@ -1,5 +1,5 @@
 # Duplicate local settings files
-init-settings:
+setup:
 	cp .env.dist .env
 	cp phpunit.xml.dist phpunit.xml
 	$(info *******************************************************************************)
@@ -17,7 +17,12 @@ install:
 # Start local server
 server:
 	php bin/console s:start
+	yarn run watch
 
-## Launch tests
+# Export products list on .csv format
+export:
+	php bin/console app:export-products
+
+# Launch tests
 test:
 	php bin/phpunit
