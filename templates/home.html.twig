@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'products'|trans %}
+
+{% block body %}
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">{{ 'products'|trans }}</h1>
+            <p class="lead text-muted"></p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+            <div class="col-md-4">
+                <div class="product-item card mb-4 box-shadow">
+                    <img class="card-img-top" src="{{ product.picture }}" alt="{{ product.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="{{ path('product_show', {'id': product.id}) }}" class="btn btn-sm btn-outline-secondary">{{ 'show'|trans }}</a>
+                                <a href="{{ path('cart_edit', {'id': product.id, 'quantity': 1}) }}" class="btn btn-sm btn-outline-secondary">{{ 'add.to.cart'|trans }}</a>
+                            </div>
+                            <small class="text-muted">{{ product.price / 100 }} €</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

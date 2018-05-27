@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="fr">
+  <file id="messages.fr">
+    <unit id="Cj4nuMq" name="products">
+      <segment>
+        <source>products</source>
+        <target>Produits</target>
+      </segment>
+    </unit>
+    <unit id="ketHyF5" name="add.to.cart">
+      <segment>
+        <source>add.to.cart</source>
+        <target>Ajouter au panier</target>
+      </segment>
+    </unit>
+    <unit id="HGMzUJ3" name="show">
+      <segment>
+        <source>show</source>
+        <target>Voir la fiche</target>
+      </segment>
+    </unit>
+    <unit id="HELdwCh" name="cart">
+      <segment>
+        <source>cart</source>
+        <target>Panier</target>
+      </segment>
+    </unit>
+    <unit id="GnswjY3" name="quantity">
+      <segment>
+        <source>quantity</source>
+        <target>Quantité</target>
+      </segment>
+    </unit>
+    <unit id="x3YeWJa" name="checkout">
+      <segment>
+        <source>checkout</source>
+        <target>Finaliser la commande</target>
+      </segment>
+    </unit>
+    <unit id="bIHyqEc" name="empty.cart">
+      <segment>
+        <source>empty.cart</source>
+        <target>Vider le panier</target>
+      </segment>
+    </unit>
+    <unit id="ZqPA7aR" name="flash.your_cart_is_empty">
+      <segment>
+        <source>flash.your_cart_is_empty</source>
+        <target>Votre panier est vide</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="en">
+  <file id="messages.en">
+    <unit id="Cj4nuMq" name="products">
+      <segment>
+        <source>products</source>
+        <target>Products</target>
+      </segment>
+    </unit>
+    <unit id="ketHyF5" name="add.to.cart">
+      <segment>
+        <source>add.to.cart</source>
+        <target>Add to cart</target>
+      </segment>
+    </unit>
+    <unit id="HGMzUJ3" name="show">
+      <segment>
+        <source>show</source>
+        <target>Show</target>
+      </segment>
+    </unit>
+    <unit id="HELdwCh" name="cart">
+      <segment>
+        <source>cart</source>
+        <target>Cart</target>
+      </segment>
+    </unit>
+    <unit id="GnswjY3" name="quantity">
+      <segment>
+        <source>quantity</source>
+        <target>Quantity</target>
+      </segment>
+    </unit>
+    <unit id="x3YeWJa" name="checkout">
+      <segment>
+        <source>checkout</source>
+        <target>Checkout</target>
+      </segment>
+    </unit>
+    <unit id="bIHyqEc" name="empty.cart">
+      <segment>
+        <source>empty.cart</source>
+        <target>Empty cart</target>
+      </segment>
+    </unit>
+    <unit id="ZqPA7aR" name="flash.your_cart_is_empty">
+      <segment>
+        <source>flash.your_cart_is_empty</source>
+        <target>Your cart is empty</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>
