@@ -11,13 +11,28 @@
             <a href="{{ path('home') }}" class="navbar-brand d-flex align-items-center">
                 <strong>Cart lite</strong>
             </a>
-            <a href="{{ path('cart_show') }}" class="btn btn-outline-light" title="{{ 'cart'|trans }}">
-                <i class="icon-basket icons"></i>
-                <span class="sr-only">{{ 'cart'|trans }}</span>
-                {% if app.session.has('cart') and app.session.get('cart')|length %}
-                <span class="badge badge-light">{{ app.session.get('cart')|length }}</span>
-                {% endif %}
-            </a>
+            <div class="btn-toolbar" role="toolbar">
+                <div class="dropdown mr-2">
+                    <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="flag-icon flag-icon-{{ app.request.locale|replace({'en': 'gb'}) }}"></span>
+                    </button>
+                    {% set route_name = app.request.attributes.get('_route') %}
+                    {% set route_params = app.request.attributes.get('_route_params') %}
+                    <div class="dropdown-menu  dropdown-menu-right">
+                        <a class="dropdown-item" href="{{ path(route_name, route_params|merge({'_locale': 'en'})) }}" title="en">
+                            <span class="flag-icon flag-icon-gb"></span> English</a>
+                        <a class="dropdown-item" href="{{ path(route_name, route_params|merge({'_locale': 'fr'})) }}" title="fr">
+                            <span class="flag-icon flag-icon-fr"></span> Français</a>
+                    </div>
+                </div>
+                <a href="{{ path('cart_show') }}" class="btn btn-outline-light" title="{{ 'cart'|trans }}">
+                    <i class="icon-basket icons"></i>
+                    <span class="sr-only">{{ 'cart'|trans }}</span>
+                    {% if app.session.has('cart') and app.session.get('cart')|length %}
+                        <span class="badge badge-light">{{ app.session.get('cart')|length }}</span>
+                    {% endif %}
+                </a>
+            </div>
         </div>
     </div>
     <main role="main">
