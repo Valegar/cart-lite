@@ -10,6 +10,7 @@ setup:
 install:
 	composer install
 	yarn
+	yarn run routes
 	php bin/console d:d:c
 	php bin/console d:s:c
 	php bin/console h:f:l
