@@ -53,9 +53,9 @@ class CartController extends AbstractController
     {
         $this->cartManager->editCart($product, $quantity);
 
-//        if ($request->isXmlHttpRequest()) {
+        if ($request->isXmlHttpRequest()) {
             return new JsonResponse(['status' => 'OK']);
-//        }
+        }
 
         return $this->redirectToRoute('cart_show');
     }
