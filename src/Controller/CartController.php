@@ -4,6 +4,9 @@ namespace App\Controller;
 
 use App\Cart\CartManager;
 use App\Entity\Product;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Translation\TranslatorInterface;
@@ -23,7 +26,11 @@ class CartController extends AbstractController
     }
 
     /**
-     * @Route("/cart", name="cart_show")
+     * @Route("/cart",
+     *     options = { "expose" = true },
+     *     name="cart_show"
+     * )
+     * @Method("GET")
      */
     public function show()
     {
@@ -37,18 +44,25 @@ class CartController extends AbstractController
     /**
      * @Route("/cart/{id}/{quantity}/edit",
      *     requirements={"id"="\d+", "quantity"="-?\d+"},
+     *     options = { "expose" = true },
      *     name="cart_edit"
      * )
+     * @Method("GET")
      */
-    public function edit(Product $product, $quantity)
+    public function edit(Request $request, Product $product, $quantity)
     {
         $this->cartManager->editCart($product, $quantity);
+
+//        if ($request->isXmlHttpRequest()) {
+            return new JsonResponse(['status' => 'OK']);
+//        }
 
         return $this->redirectToRoute('cart_show');
     }
 
     /**
      * @Route("/cart/reset", name="cart_reset")
+     * @Method("GET")
      */
     public function reset(TranslatorInterface $translator)
     {
